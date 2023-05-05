@@ -206,21 +206,20 @@ document.addEventListener("DOMContentLoaded", function () {
       e.target.setCustomValidity("");
     };
   }
-})(
-  //ACtive Sidebar
-  function () {
-    var current = location.pathname.substring(
-      location.pathname.lastIndexOf("/") + 1
-    );
-    if (current === "") return;
-    var menuItems = document.querySelectorAll(".sidebar-nav a");
-    for (var i = 0, len = menuItems.length; i < len; i++) {
-      if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
-        menuItems[i].parentElement.className += " active";
-      }
+});
+//ACtive Sidebar
+(function () {
+  var current = location.pathname.substring(
+    location.pathname.lastIndexOf("/") + 1
+  );
+  if (current === "") return;
+  var menuItems = document.querySelectorAll(".sidebar-nav a");
+  for (var i = 0, len = menuItems.length; i < len; i++) {
+    if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
+      menuItems[i].parentElement.className += " active";
     }
   }
-)();
+})();
 
 //Feather icon
 feather.replace();
