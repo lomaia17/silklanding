@@ -51,7 +51,7 @@
                     </li>
                     
                     <li class="list-inline-item ps-1 mb-0">
-                        <a href="https://1.envato.market/landrick" target="_blank">
+                        <a href="" target="_blank">
                         2 242 242
                         </a>
                     </li>
@@ -66,7 +66,7 @@
         <!-- Hero Start -->
         <section class="bg-half-70 d-table w-100">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row text-center text-md-start">
                     <div class="col-md-6">
                         <div class="mt-4 pt-2">
                             <a href="#table-container" class="btn btn-primary">ყველაზე მაღალი პროცენტი</a>
@@ -77,16 +77,16 @@
                         </div>
 
                         <div class="subcribe-form mt-4 pt-2">
-                            <form>
-                                <input type="email" id="email" name="email" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
-                                <button type="submit" class="btn btn-pills btn-primary">გაგზავნა</button>
+                            <form autocomplete="off">
+                                <input type="number" oninput="if(this.value.length > 9) this.value = this.value.slice(0,9)" id="email" name="email" autocomplete="off" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
+                                <button type="submit"  class="btn btn-pills btn-primary">გაგზავნა</button>
                             </form><!--end form-->
                         </div>
                     
                     </div><!--end col-->
 
                     <div class="col-md-6">
-                        <img src="assets/images/illustrator/Creativity-bro.svg" alt="">
+                        <img src="../dist/assets/images/iluustrator/Creativity-bro.svg" alt="">
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
@@ -101,8 +101,8 @@
         <!-- Hero End -->
 
         <!-- Services Start -->
-        <section class="section bg-light">
-            <div class="container">
+        <section class="bg-light">
+            <div class="container pt-5">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
                         <div class="section-title mb-4 pb-2">
@@ -163,13 +163,17 @@
             <div class="container mt-100 mt-60">
                 <div class="container">
                     <div class="row align-items-center">
+                        <div class="section-title ms-lg-5 d-block d-sm-none">
+                            <h4 class="title mb-4">სადეპოზიტო სერტიფიკატის შესახებ</h4>
+                        </div>
                         <div class="col-lg-5 col-md-6">
-                            <img src="assets/images/illustrator/undraw_crypto.svg" class="img-fluid" alt="">
+                           
+                            <img src="../dist/assets/images/iluustrator/undraw_crypto.svg" class="img-fluid" alt="">
                         </div><!--end col-->
     
                         <div class="col-lg-7 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
                             <div class="section-title ms-lg-5">
-                                <h4 class="title mb-4">სადეპოზიტო სერტიფიკატის შესახებ</h4>
+                                <h4 class="title mb-4 d-none d-sm-block">სადეპოზიტო სერტიფიკატის შესახებ</h4>
                                 <ul class="list-unstyled text-muted">
                                     <li class="mb-1"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>დისკონტური (სარგებელს მიიღებთ ვადის ბოლოს)</li>
                                     <li class="mb-1"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>საპროცენტო (სარგებელს მიიღებთ ყოველთვიურად)</li>
@@ -198,7 +202,7 @@
                         <div class="col-md-4 mt-4 mt-sm-0">
                             <div class="subcribe-form mt-4 pt-2">
                                 <form>
-                                    <input type="email" id="email" name="email" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
+                                    <input type="number" oninput="if(this.value.length > 9) this.value = this.value.slice(0,9)" autocomplete="off" id="email" name="email" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
                                     <button type="submit" class="btn btn-pills btn-primary">გაგზავნა</button>
                                 </form><!--end form-->
                             </div>
@@ -209,14 +213,14 @@
         </section> <!--end section-->
         <!-- Phone End -->
         <!-- Table Start -->
-        <section class="bg-light pt-5 pb-5">
+        <section class="bg-light pt-5 pb-5" id="table-container">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
-                        <div class="section-title mb-4 pb-2">
+                        <div class="section-title mb-4">
                             <h4 class="title mb-4">საპროცენტო განაკვეთი</h4>
                         </div>
-                        <div class="row justify-content-center" id="table-container">
+                        <div class="row justify-content-center">
                             <div class="col-lg-8 col-md-12 mt-4 pt-2 text-center">
                                 <ul class="nav nav-pills nav-justified flex-column flex-sm-row rounded bg-light wow animate__animated animate__fadeInUp" data-wow-delay=".3s" id="pills-tab" role="tablist">
                                     <li class="nav-item">
@@ -240,7 +244,7 @@
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
-            </section>
+            
             <div class="tab-content" id="pills-tabContent">
             <!-- Table Start -->
             <section class="tab-pane fade show active" id="ind-pers" role="tabpanel" aria-labelledby="ind-tab">
@@ -249,12 +253,15 @@
                         <div class="row">
                             <!-- Table Start -->
                             <div class="col-12 mt-4 pt-2">
-                                <div class="component-wrapper rounded shadow">
-                                    <div class="p-4 border-bottom">
+                                <div class="component-wrapper bg-white rounded shadow">
+                                    <div class="p-4 border-bottom d-flex justify-content-between align-items-center"
+                                    style="cursor:pointer"
+                                    onclick="toggleTable(this)">
                                         <h5 class="title mb-0"> დისკონტური </h5>
+                                        <i data-feather="chevron-down" class="fea icon-sm"></i>
                                     </div>
 
-                                    <div class="p-4">
+                                    <div class="p-4 table-wrapper">
                                         <div class="table-responsive bg-white shadow rounded">
                                             <table class="table table-hover mb-0 table-center">
                                                 <thead>
@@ -298,12 +305,15 @@
 
                             <!-- Table Start -->
                             <div class="col-12 mt-4 pt-2">
-                                <div class="component-wrapper rounded shadow">
-                                    <div class="p-4 border-bottom">
+                                <div class="component-wrapper bg-white rounded shadow">
+                                    <div class="p-4 border-bottom d-flex justify-content-between align-items-center" 
+                                    style="cursor:pointer"
+                                    onclick="toggleTable(this)">
                                         <h5 class="title mb-0"> საპროცენტო </h5>
+                                        <i data-feather="chevron-down" class="fea icon-sm"></i>
                                     </div>
 
-                                    <div class="p-4">
+                                    <div class="p-4 table-wrapper" style="display:none;">
                                         <div class="table-responsive bg-white shadow rounded">
                                             <table class="table table-hover mb-0 table-center">
                                                 <thead>
@@ -356,12 +366,15 @@
                     <div class="row">
                         <!-- Table Start -->
                         <div class="col-12 mt-4 pt-2">
-                            <div class="component-wrapper rounded shadow">
-                                <div class="p-4 border-bottom">
+                            <div class="component-wrapper bg-white rounded shadow">
+                                <div class="p-4 border-bottom d-flex justify-content-between align-items-center" 
+                                style="cursor:pointer"
+                                onclick="toggleTable(this)">
                                     <h5 class="title mb-0"> დისკონტური </h5>
+                                    <i data-feather="chevron-down" class="fea icon-sm"></i>
                                 </div>
 
-                                <div class="p-4">
+                                <div class="p-4 table-wrapper">
                                     <div class="table-responsive bg-white shadow rounded">
                                         <table class="table table-hover mb-0 table-center">
                                             <thead>
@@ -405,12 +418,15 @@
 
                         <!-- Table Start -->
                         <div class="col-12 mt-4 pt-2">
-                            <div class="component-wrapper rounded shadow">
-                                <div class="p-4 border-bottom">
+                            <div class="component-wrapper  bg-white rounded shadow">
+                                <div class="p-4 border-bottom d-flex justify-content-between align-items-center"  
+                                style="cursor:pointer"
+                                onclick="toggleTable(this)">
                                     <h5 class="title mb-0"> საპროცენტო </h5>
+                                    <i data-feather="chevron-down" class="fea icon-sm"></i>
                                 </div>
 
-                                <div class="p-4">
+                                <div class="p-4 table-wrapper" style="display:none;">
                                     <div class="table-responsive bg-white shadow rounded">
                                         <table class="table table-hover mb-0 table-center">
                                             <thead>
@@ -458,13 +474,14 @@
        
         </section>
     </div>
+</section>
         <!-- Table End -->
         <!-- Doc Start -->
         <section class="mt-5 mb-5">
             <div class="container">
                 <div class="card rounded bg-light shadow border-0">
                     <div class="card-body">
-                        <div class="row align-items-center">
+                        <div class="row align-items-center text-center text-md-start">
                             <div class="col-sm-7">
                                 <div class="text-sm-start">
                                     <h5 class="mb-0">პირობების დოკუმენტი</h5>
@@ -498,7 +515,7 @@
                         <div class="col-md-4 mt-4 mt-sm-0">
                             <div class="subcribe-form mt-4 pt-2">
                                 <form>
-                                    <input type="email" id="email" name="email" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
+                                    <input type="number" oninput="if(this.value.length > 9) this.value = this.value.slice(0,9)" autocomplete="off" id="email" name="email" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
                                     <button type="submit" class="btn btn-pills btn-primary">გაგზავნა</button>
                                 </form><!--end form-->
                             </div>

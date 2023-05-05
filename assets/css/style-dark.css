@@ -1069,8 +1069,20 @@ p {
   border-color: #2f55d4;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .subcribe-form .btn {
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 .subcribe-form input {
   padding: 12px 20px;
@@ -1081,6 +1093,7 @@ p {
   padding-right: 160px;
   background-color: rgba(28, 40, 54, 0.8);
   height: 50px;
+  border-radius: 6px !important;
 }
 .subcribe-form input::-webkit-input-placeholder {
   color: #dee2e6;
@@ -1099,14 +1112,13 @@ p {
 }
 .subcribe-form button {
   position: absolute;
-  top: 2px;
-  right: 3px;
+  top: 4px;
+  right: 4px;
   outline: none !important;
 }
 .subcribe-form form {
   position: relative;
-  max-width: 600px;
-  margin: 0px auto;
+  max-width: 400px;
 }
 
 /*********************************/

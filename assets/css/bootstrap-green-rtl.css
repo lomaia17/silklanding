@@ -12883,7 +12883,7 @@ a.text-muted:hover, a.text-muted:focus {
   padding: 6px 20px;
 }
 .btn.btn-pills {
-  border-radius: 30px;
+  border-radius: 6px;
 }
 .btn.btn-light {
   border: 1px solid #f2f4f6;
