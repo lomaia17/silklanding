@@ -187,10 +187,30 @@ function topFunction() {
 function toggleTable(button) {
   var parent = button.parentElement;
   var table = parent.querySelector("div.table-wrapper");
+  var icon = parent.querySelector("svg");
   if (table.style.display === "none") {
     table.style.display = "block";
+    table.style.opacity = 0;
+    table.style.display = "block";
+    intervalId = setInterval(function () {
+      opacity += 0.3;
+      table.style.opacity = opacity;
+      if (opacity >= 1) {
+        clearInterval(intervalId);
+      }
+    }, 50);
+    icon.innerHTML = feather.icons["chevron-up"].toSvg() + " Power On";
   } else {
-    table.style.display = "none";
+    opacity = 1;
+    intervalId = setInterval(function () {
+      opacity -= 0.3;
+      table.style.opacity = opacity;
+      if (opacity <= 0) {
+        table.style.display = "none";
+        clearInterval(intervalId);
+      }
+    }, 50);
+    icon.innerHTML = feather.icons["chevron-down"].toSvg() + " Power On";
   }
 }
 document.addEventListener("DOMContentLoaded", function () {

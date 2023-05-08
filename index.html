@@ -69,7 +69,7 @@
                 <div class="row text-center text-md-start">
                     <div class="col-md-6">
                         <div class="mt-4 pt-2">
-                            <a href="#table-container" class="btn btn-primary">ყველაზე მაღალი პროცენტი</a>
+                            <a href="#table-container" onclick="scrollToSection()" class="btn btn-primary">ყველაზე მაღალი პროცენტი</a>
                         </div>
                         <div class="title-heading mt-4">
                             <h1 class="display-4 fw-bold mb-3">სადეპოზიტო <br> სერტიფიკატი</h1>
@@ -78,7 +78,7 @@
 
                         <div class="subcribe-form mt-4 pt-2">
                             <form autocomplete="off">
-                                <input type="number" oninput="if(this.value.length > 9) this.value = this.value.slice(0,9)" id="email" name="email" autocomplete="off" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
+                                <input type="number" id="phone" name="phone" autocomplete="off" class="border shadow rounded-pill phone-btn" required placeholder="საკონტაქტო ნომერი">
                                 <button type="submit"  class="btn btn-pills btn-primary">გაგზავნა</button>
                             </form><!--end form-->
                         </div>
@@ -86,7 +86,7 @@
                     </div><!--end col-->
 
                     <div class="col-md-6">
-                        <img src="assets/images/illustrator/Creativity-bro.svg" alt="">
+                        <img src="../dist/assets/images/iluustrator/Creativity-bro.svg" alt="">
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
@@ -163,12 +163,12 @@
             <div class="container mt-100 mt-60">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="section-title ms-lg-5 d-block d-sm-none">
+                        <div class="section-title ms-lg-5 d-block d-sm-none text-center">
                             <h4 class="title mb-4">სადეპოზიტო სერტიფიკატის შესახებ</h4>
                         </div>
                         <div class="col-lg-5 col-md-6">
                            
-                            <img src="assets/images/illustrator/undraw_crypto.svg" class="img-fluid" alt="">
+                            <img src="../dist/assets/images/iluustrator/undraw_crypto.svg" class="img-fluid" alt="">
                         </div><!--end col-->
     
                         <div class="col-lg-7 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
@@ -200,9 +200,9 @@
                         </div><!--end col-->
                         
                         <div class="col-md-4 mt-4 mt-sm-0">
-                            <div class="subcribe-form mt-4 pt-2">
+                            <div class="subcribe-form mt-4 pt-2" id="table-container">
                                 <form>
-                                    <input type="number" oninput="if(this.value.length > 9) this.value = this.value.slice(0,9)" autocomplete="off" id="email" name="email" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
+                                    <input type="number" autocomplete="off" id="phone2" name="phone" class="border shadow rounded-pill phone-btn" required placeholder="საკონტაქტო ნომერი">
                                     <button type="submit" class="btn btn-pills btn-primary">გაგზავნა</button>
                                 </form><!--end form-->
                             </div>
@@ -213,7 +213,7 @@
         </section> <!--end section-->
         <!-- Phone End -->
         <!-- Table Start -->
-        <section class="bg-light pt-5 pb-5" id="table-container">
+        <section class="bg-light pt-5 pb-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
@@ -258,7 +258,7 @@
                                     style="cursor:pointer"
                                     onclick="toggleTable(this)">
                                         <h5 class="title mb-0"> დისკონტური </h5>
-                                        <i data-feather="chevron-down" class="fea icon-sm"></i>
+                                        <i data-feather="chevron-up" class="fea icon-sm"></i>
                                     </div>
 
                                     <div class="p-4 table-wrapper">
@@ -371,7 +371,7 @@
                                 style="cursor:pointer"
                                 onclick="toggleTable(this)">
                                     <h5 class="title mb-0"> დისკონტური </h5>
-                                    <i data-feather="chevron-down" class="fea icon-sm"></i>
+                                    <i data-feather="chevron-up" class="fea icon-sm"></i>
                                 </div>
 
                                 <div class="p-4 table-wrapper">
@@ -515,7 +515,7 @@
                         <div class="col-md-4 mt-4 mt-sm-0">
                             <div class="subcribe-form mt-4 pt-2">
                                 <form>
-                                    <input type="number" oninput="if(this.value.length > 9) this.value = this.value.slice(0,9)" autocomplete="off" id="email" name="email" class="border shadow rounded-pill" required placeholder="5xx xx xx xx">
+                                    <input type="number" autocomplete="off" id="phone" name="phone" class="border shadow rounded-pill phone-btn" required placeholder="საკონტაქტო ნომერი">
                                     <button type="submit" class="btn btn-pills btn-primary">გაგზავნა</button>
                                 </form><!--end form-->
                             </div>
@@ -569,5 +569,7 @@
         <script src="assets/libs/feather-icons/feather.min.js"></script>
         <script src="assets/js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
         <script src="assets/js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+
+            
     </body>
 </html>
