@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const containerId = "b24-form-control-container";
 
       const successElement = document.getElementsByClassName(successClass)[0];
-      const containerElement = document.getElementById(containerId);
+      const containerElement = document.getElementsByClassName(containerId)[0];
 
       if (
         successElement &&
