@@ -228,6 +228,29 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 });
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  const successClass = "b24-form-success";
+  const containerId = "b24-form-control-container";
+
+  const successElement = document.getElementsByClassName(successClass)[0];
+  const containerElement = document.getElementById(containerId);
+
+  if (
+    successElement &&
+    window.getComputedStyle(successElement).display === "block"
+  ) {
+    const newParagraph = document.createElement("p");
+    const paragraphText = document.createTextNode(
+      "თქვენი მონაცემები მიღებულია"
+    );
+    newParagraph.appendChild(paragraphText);
+    containerElement.appendChild(newParagraph);
+  }
+});
 //ACtive Sidebar
 (function () {
   var current = location.pathname.substring(
