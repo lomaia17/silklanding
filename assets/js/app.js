@@ -227,30 +227,32 @@ document.addEventListener("DOMContentLoaded", function () {
       e.target.setCustomValidity("");
     };
   }
-});
-const form = document.querySelector("form");
+  const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the form from submitting
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent the form from submitting
+      const successClass = "b24-form-success";
+      const containerId = "b24-form-control-container";
 
-  const successClass = "b24-form-success";
-  const containerId = "b24-form-control-container";
+      const successElement = document.getElementsByClassName(successClass)[0];
+      const containerElement = document.getElementById(containerId);
 
-  const successElement = document.getElementsByClassName(successClass)[0];
-  const containerElement = document.getElementById(containerId);
-
-  if (
-    successElement &&
-    window.getComputedStyle(successElement).display === "block"
-  ) {
-    const newParagraph = document.createElement("p");
-    const paragraphText = document.createTextNode(
-      "თქვენი მონაცემები მიღებულია"
-    );
-    newParagraph.appendChild(paragraphText);
-    containerElement.appendChild(newParagraph);
+      if (
+        successElement &&
+        window.getComputedStyle(successElement).display === "block"
+      ) {
+        const newParagraph = document.createElement("p");
+        const paragraphText = document.createTextNode(
+          "თქვენი მონაცემები მიღებულია"
+        );
+        newParagraph.appendChild(paragraphText);
+        containerElement.appendChild(newParagraph);
+      }
+    });
   }
 });
+
 //ACtive Sidebar
 (function () {
   var current = location.pathname.substring(
