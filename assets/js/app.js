@@ -188,6 +188,7 @@ function toggleTable(button) {
   var parent = button.parentElement;
   var table = parent.querySelector("div.table-wrapper");
   var icon = parent.querySelector("svg");
+  let opacity = 0;
   if (table.style.display === "none") {
     table.style.display = "block";
     table.style.opacity = 0;
